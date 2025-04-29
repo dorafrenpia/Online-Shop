@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Toko Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="shop">
+    <script src="script.js"></script>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html"style="opacity: 0.5;" >Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<section class="filter-bar">
+<input style="margin-bottom:5%;"type="text" id="search-input" placeholder="Cari produk..." onkeyup="searchproduct()">
+
+
+    <label for="category">Kategori:</label>
+    <select id="category">
+        <option value="elektronik">Elektronik</option>
+        <option value="pakaian">Pakaian</option>
+        <option value="aksesori">Aksesori</option>
+    </select>
+
+    <div class="pricebar">
+    <label for="price">Harga:</label>
+    <input type="range" id="price" min="0" max="1000000" step="50000">
+    <span id="price-value">0</span>
+</div>
+
+    <button onclick="searchproduct()">Filter</button>
+</section>
+<section class="product-grid">
+    
+    <!-- Form Pencarian -->
+    <div id="no-products-message" style="display: none; text-align: center; font-size: 18px; color: red; ">
+        Tidak ada produk yang tersedia
+    </div>
+    <div class="product-card" data-category="elektronik">
+        <img src="/Images/lampu1.png" alt="Lampu OrionLED 14 watt">
+        <h3>Lampu OrionLED 14 watt</h3>
+        <p class="product-price">Rp 20.000</p>
+        <button onclick="addToCart('Lampu OrionLED 14 watt', 20000, '/Images/lampu1.png')">Tambah ke Keranjang</button>
+    </div>
+    
+    <div class="product-card" data-category="elektronik">
+        <img src="/Images/lampu2.png" alt="Lampu Hannochs LED Inifity 5 watt">
+        <h3>Lampu Hannochs LED Inifity 5 watt</h3>
+        <p class="product-price">Rp 30.000</p>
+        <button onclick="addToCart('Lampu Hannochs LED Inifity 5 watt', 30000, '/Images/lampu2.png')">Tambah ke Keranjang</button>
+    </div>
+
+        
+    <div class="product-card" data-category="pakaian">
+        <img src="/Images/pakaian1.png" alt="Turtleneck H&M Pria dan Wanita">
+        <h3>Turtleneck H&M Pria dan Wanita</h3>
+        <p class="product-price">Rp 300.000</p>
+        <button onclick="addToCart('Turtleneck H&M Pria dan Wanita', 300000, '/Images/pakaian1.png')">Tambah ke Keranjang</button>
+    </div>
+    <div class="product-card" data-category="pakaian">
+        <img src="/Images/pakaian2.png" alt="The Turtleneck Kirna Zabete">
+        <h3>The Turtleneck Kirna Zabete</h3>
+        <p class="product-price">Rp 500.000</p>
+        <button onclick="addToCart('The Turtleneck Kirna Zabete', 500000, '/Images/pakaian2.png')">Tambah ke Keranjang</button>
+    </div>
+    <div class="product-card" data-category="aksesori">
+        <img src="product3.jpg" alt="aksesori 1">
+        <h3>Produk 3</h3>
+        <p class="product-price">Rp 150.000</p>
+        <button onclick="addToCart('aksesori 1', 150000, 'product3.jpg')">Tambah ke Keranjang</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Toko Online. Semua hak dilindungi.</p>
+</footer>
+
+</body>
+</html>
